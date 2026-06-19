@@ -10,7 +10,7 @@ Bitbucket:
 
 GitHub Pages:
 
-[https://hornertc.github.io/Professional-Webpage/](https://hornertc.github.io/Professional-Webpage/)
+[https://hornertc.github.io/resume/](https://hornertc.github.io/resume/)
 
 ## Run locally
 
