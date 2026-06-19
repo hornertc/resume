@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homepage of Tommy Horner</title>
+</head>
+
+<body onload="startTime()">
+Current time: <div id="clock"></div>
+<h1>Personal homepage on Bitbucket</h1>
+<h2>Tommy Horner, University of Dayton</h2>
+<p>Just a demo page for Bitbucket homepage</p>
+<img src="https://bitbucket.org/thorner1/thorner1.bitbucket.io/raw/315158e5516ad338a3c293c60f961c15f759a894/profilepic.JPG" alt="Thomas C. Horner" width="300" height="269">
+<p>Lab 4 - Client-side Web Security and Webpage Development</p>
+<p>CPS 475/575</p>
+<p>Secure Application Development</p>
+<p>Dr. Phu Phung</p>
+
+<script>
+document.write("Content generated from document.write");
+document.write("<script>alert('script code is generated within script code');</"+"script>");
+
+if (document.cookie.indexOf("username") <0 ){
+    alert('No username in cookie, set a new one');
+    document.cookie = "username=thorner1";
+}else
+    alert("My cookie: " + document.cookie);
+
+function startTime(){
+    document.getElementById('clock').innerHTML = new Date();
+    setTimeout(startTime, 500);
+}
+
+var shown = false;
+function showhide(){
+    if (shown){
+        document.getElementById('email').innerHTML = 'show my email';
+         shown = false;
+    }else{
+        var myemail = "<a href='mailto:thorner1" + "@" + "udayton.edu'>thorner1" + "@" + "udayton.edu</a>";
+        document.getElementById('email').innerHTML = myemail;
+        shown = true;
+    }
+}
+</script>
+
+<p><div id = "email" onclick="showhide()">show my email</div></p>
+
+<script
+    src="https://phu-udayton.bitbucket.io/remote.js">
+</script>
+
+</body>
+
+</html>
